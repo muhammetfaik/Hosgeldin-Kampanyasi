@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('uruns', function (Blueprint $table) {
             $table->id();
             $table->string("urunadi")->nullable();
-            $table->decimal("urunkodu",10)->nullable();
+            $table->decimal("urunkodu",255)->nullable();
+            $table->string("image",255)->nullable();
+            $table->decimal("price",6,2);
             $table->timestamps();
         });
     }
